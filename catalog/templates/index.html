@@ -1,0 +1,18 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>전현욱의 테스트 웹 : 라이브러리</h1>
+  <p>전현욱의 테스트 웹 라이브러리 <em>참고: 모질라 개발 네트워크</em></p>
+  <h2>컨텐츠</h2>
+  <p>라이브러리 카운터</p>
+  <ul>
+    <li><strong>책 수:</strong> {{ num_books }}</li>
+    <li><strong>책인스턴스 수:</strong> {{ num_instances }}</li>
+    <li><strong>대여 가능 책인스턴스 수:</strong> {{ num_instances_available }}</li>
+    <li><strong>저자 수:</strong> {{ num_authors }}</li>
+    <li><strong>테스트가 포함된 책 수:</strong> {{ num_books_with_test }}</li>
+    <li><strong>과학이 포함된 장르 수:</strong> {{ num_genre_with_science }}</li>
+  </ul>
+
+  <p>방문 횟수 : {{ num_visits }}번</p>
+{% endblock %}

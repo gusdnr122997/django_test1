@@ -1,0 +1,16 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>작가 목록</h1>
+  {% if author_list %}
+  <ul>
+    {% for author in author_list %}
+      <li>
+        <a href="{{ author.get_absolute_url }}">{{ author.last_name }} {{ author.first_name }} ({{ author.date_of_birth }} ~ )</a>
+      </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p>라이브러리에 등록된 작가가 없습니다.</p>
+  {% endif %} 
+{% endblock %}
